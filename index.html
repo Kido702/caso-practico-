@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneo Comunitario Roblox | Inscripción</title>
+    <style>
+        :root {
+            --roblox-red: #e2231a;
+            --bg-dark: #0f1117;
+            --card-bg: #1a1d26;
+            --input-bg: #12141c;
+            --border-color: #2b3040;
+            --text-color: #f0f2f5;
+            --text-muted: #8b92a5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 15px;
+            background-image: radial-gradient(circle at 50% 10%, rgba(226, 35, 26, 0.15) 0%, transparent 60%);
+        }
+
+        .container {
+            width: 100%;
+            max-width: 520px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 35px 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .tag {
+            display: inline-block;
+            background-color: rgba(226, 35, 26, 0.15);
+            color: #ff4d43;
+            border: 1px solid var(--roblox-red);
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            margin-bottom: 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            font-weight: 800;
+            color: #fff;
+            margin-bottom: 6px;
+        }
+
+        .header p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #d1d5db;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 11px 14px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            color: #fff;
+            font-size: 14px;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        input:focus,
+        select:focus {
+            border-color: var(--roblox-red);
+            box-shadow: 0 0 0 3px rgba(226, 35, 26, 0.25);
+        }
+
+        select option {
+            background-color: var(--card-bg);
+            color: #fff;
+        }
+
+        .rules-box {
+            background-color: rgba(0, 0, 0, 0.25);
+            border: 1px dashed var(--border-color);
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .checkbox-group input {
+            margin-top: 3px;
+            accent-color: var(--roblox-red);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-size: 13px;
+            color: var(--text-muted);
+            font-weight: normal;
+            cursor: pointer;
+            margin-bottom: 0;
+        }
+
+        button.btn-submit {
+            width: 100%;
+            padding: 13px;
+            background-color: var(--roblox-red);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+
+        button.btn-submit:hover {
+            background-color: #c71b13;
+        }
+
+        button.btn-submit:active {
+            transform: scale(0.98);
+        }
+
+        @media (max-width: 500px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <span class="tag">Roblox Esports 2026</span>
+            <h1>Inscripción al Torneo</h1>
+            <p>Registra a tu participante o equipo para la fase clasificatoria</p>
+        </div>
+
+        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('¡Inscripción registrada con éxito para el torneo de Roblox!');">
+            
+            <!-- Usuario y Nickname -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="roblox-user">Usuario de Roblox (@)</label>
+                    <input type="text" id="roblox-user" name="roblox_user" placeholder="Ej: NoobMaster99" required>
+                </div>
+                <div class="form-group">
+                    <label for="roblox-id">ID de Cuenta (opcional)</label>
+                    <input type="number" id="roblox-id" name="roblox_id" placeholder="Ej: 148291045">
+                </div>
+            </div>
+
+            <!-- Juego del Torneo -->
+            <div class="form-group">
+                <label for="juego">Modalidad / Juego</label>
+                <select id="juego" name="juego" required>
+                    <option value="" disabled selected>Selecciona el juego</option>
+                    <option value="bedwars">BedWars (Modo Escuadrón 4v4)</option>
+                    <option value="bloxfruits">Blox Fruits (Torneo PvP 1v1)</option>
+                    <option value="arsenal">Arsenal (Todos contra Todos)</option>
+                    <option value="rivals">Rivals (Duelo de Disparos 1v1)</option>
+                    <option value="tower">Tower of Hell (Carrera de Velocidad)</option>
+                </select>
+            </div>
+
+            <!-- Nombre de Equipo o Clan -->
+            <div class="form-group">
+                <label for="equipo">Nombre del Clan o Equipo (si aplica)</label>
+                <input type="text" id="equipo" name="equipo" placeholder="Ej: Red Blox Team">
+            </div>
+
+            <!-- Contacto: Discord y Región -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="discord">Usuario de Discord</label>
+                    <input type="text" id="discord" name="discord" placeholder="usuario#0000 o @usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="region">Región / Servidor</label>
+                    <select id="region" name="region" required>
+                        <option value="SA">América del Sur (Brasil/Chile)</option>
+                        <option value="NA">Norteamérica (US East / West)</option>
+                        <option value="EU">Europa</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Reglas importantes -->
+            <div class="rules-box">
+                ⚠ <strong>Aviso importante:</strong> Queda estrictamente prohibido el uso de exploits, scripts o trampas de terceros. El incumplimiento causará baneo inmediato del evento.
+            </div>
+
+            <!-- Checkbox de Aceptación -->
+            <div class="checkbox-group">
+                <input type="checkbox" id="reglas" name="reglas" required>
+                <label for="reglas">He leído y acepto el reglamento del torneo y el código de conducta.</label>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button type="submit" class="btn-submit">Confirmar Inscripción</button>
+        </form>
+    </div>
+
+</body>
+</html>
